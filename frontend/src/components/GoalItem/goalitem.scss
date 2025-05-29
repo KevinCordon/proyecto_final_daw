@@ -1,0 +1,14 @@
+$primary: #F2F2F2;
+$secundary:#0540F2;
+
+
+.card {
+    background-color: $primary;
+    margin-top: 30px;
+    border: 0cap;
+}
+
+.btn {
+    background-color: $secundary;
+    border: $secundary;
+}
