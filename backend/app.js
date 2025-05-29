@@ -1,4 +1,6 @@
 require('./db');
+const cors = require('cors');
+
 
 var createError = require('http-errors');
 var express = require('express');
@@ -13,6 +15,7 @@ var goalsRouter = require('./routes/goals');
 var tasksRouter = require('./routes/tasks');
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
