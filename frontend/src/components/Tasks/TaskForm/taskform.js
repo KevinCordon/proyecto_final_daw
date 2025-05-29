@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addGoal } from "../../redux/actions/goalActions";
-import './goalform.scss';
+import { addGoal } from "../../../redux/actions/goalActions";
+import './taskitem.scss';
 
-function GoalForm() {
+function Taskform() {
   const dispatch = useDispatch();
 
   const [name, setName] = useState("");
@@ -29,7 +29,7 @@ function GoalForm() {
         <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Goal name"
+          placeholder="Task name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -40,7 +40,7 @@ function GoalForm() {
         <Form.Control
           as="textarea"
           rows={2}
-          placeholder="Goal description"
+          placeholder="Task description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
@@ -56,10 +56,10 @@ function GoalForm() {
       </Form.Group>
 
       <Button variant="primary" type="submit" className="w-100">
-        ADD GOAL
+        ADD Task
       </Button>
     </Form>
   );
 }
 
-export default GoalForm;
+export default Taskform;

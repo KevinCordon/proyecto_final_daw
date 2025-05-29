@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c3acc74-e0d4-4fc1-aa99-fe719cc35cc6" name="Changes" comment="" />
+    <list default="true" id="0c3acc74-e0d4-4fc1-aa99-fe719cc35cc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskitem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalForm/goalform.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalForm/goalform.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalItem/goalitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalItem/goalitem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskItem/taskitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskItem/taskitem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +35,12 @@
     &quot;assignee&quot;: &quot;KevinCordon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/KevinCordon/desarrollo_aplicaciones_web_projecto.git&quot;,
-    &quot;accountId&quot;: &quot;91eea763-8dbf-49d0-b815-2c3591d1d0f5&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KevinCordon/proyecto_final_daw.git",
+    "accountId": "91eea763-8dbf-49d0-b815-2c3591d1d0f5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -39,16 +54,27 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/Kevin/Desktop/DAW/Desarrollo_de_aplicaciones_web/todo-list/frontend/src/components/TaskItem",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Kevin/Desktop/Projecto_Final/todo-list/frontend/src/components/Tasks/TaskForm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\Projecto_Final\todo-list\frontend\src\components\Tasks\TaskForm" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\Projecto_Final\todo-list\frontend\src\components\Tasks" />
+      <recent name="C:\Users\Kevin\Desktop\Projecto_Final\todo-list\frontend\src\components\Goals" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,6 +92,7 @@
       <workItem from="1748367151494" duration="40000" />
       <workItem from="1748480156951" duration="1459000" />
       <workItem from="1748541773577" duration="493000" />
+      <workItem from="1748542557876" duration="2220000" />
     </task>
     <servers />
   </component>

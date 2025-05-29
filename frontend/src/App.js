@@ -1,29 +1,48 @@
 import './App.scss';
 import Menu from './components/Navbar/navbar';
+import TaskForm from './components/Tasks/TaskForm/taskform';
+import TaskItem from './components/Tasks/TaskItem/taskitem';
+import GoalForm from './components/Goals/GoalForm/goalform';
+import GoalItem from './components/Goals/GoalItem/goalitem';
+import { Routes, Route } from 'react-router-dom';
+
+function Landing() {
+    return (
+        <div className="landing">
+            <h1>Bienvenido a My Goals</h1>
+            <p>Administra tus metas personales fácilmente.</p>
+        </div>
+    );
+}
+
+function TasksPage() {
+    return (
+        <div className="tasks-page" style={{ padding: '20px' }}>
+            <TaskForm />
+            <TaskItem />
+        </div>
+    );
+}
+
+function GoalsPage() {
+    return (
+        <div className="tasks-page" style={{ padding: '20px' }}>
+            <GoalForm />
+            <GoalItem />
+        </div>
+    );
+}
+
 
 function App() {
     return (
-        <div className="App">
-            <Menu />  {/* Navbar arriba */}
-
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '80vh',
-                padding: '0 20px',
-                textAlign: 'center',
-                backgroundColor: '#f8f9fa'
-            }}>
-                <div>
-                    <h1>Bienvenido a My Goals</h1>
-                    <p>
-                        Este proyecto te ayuda a gestionar tus metas y tareas personales de manera sencilla.
-                        Puedes agregar, ver y eliminar tus metas con una interfaz fácil de usar.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <>
+            <Menu />
+            <Routes>
+                <Route path="/goals" element={<GoalsPage />} />
+                <Route path="/tasks" element={<TasksPage />} />
+            </Routes>
+        </>
     );
 }
 

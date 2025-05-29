@@ -2,10 +2,10 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { removeGoal } from "../../redux/actions/goalActions";
-import './taskitem.scss';
+import { removeGoal } from "../../../redux/actions/goalActions";
+import './goalitem.scss';
 
-function Taskitem() {
+function Goalitem() {
   const goals = useSelector((state) => state.goals);
   const dispatch = useDispatch();
 
@@ -39,7 +39,7 @@ function Taskitem() {
   );
 }
 
-export default Taskitem;
+export default Goalitem;
 
 
 
