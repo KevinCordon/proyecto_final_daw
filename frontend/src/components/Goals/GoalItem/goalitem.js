@@ -6,15 +6,18 @@ import { removeGoal } from "../../../redux/actions/goalActions";
 import './goalitem.scss';
 
 function Goalitem() {
+
   const goals = useSelector((state) => state.goals);
   const dispatch = useDispatch();
 
   return (
     <div className="goal-list">
+
       {goals.length === 0 ? (
         <p>No goals added yet.</p>
       ) : (
-        goals.map((goal, index) => (
+        goals.map((goal, index) => {
+          console.log("Goal", index, goal);
           <Card style={{ width: '18rem' }} key={index} className="mb-3 goal-card">
             <Card.Body>
               <Card.Title><strong>Name</strong><br />{goal.name}</Card.Title>
@@ -22,7 +25,7 @@ function Goalitem() {
                 <strong>Description</strong><br />{goal.description}
               </Card.Text>
               <Card.Text>
-                <strong>Due Date:</strong> {goal.dueDate}
+                <strong>Due Date: {goal.dueDate ? new Date(goal.dueDate).toLocaleDateString() : 'No due date'}</strong>
               </Card.Text>
               <Button
                 variant="danger"
@@ -33,7 +36,7 @@ function Goalitem() {
               </Button>
             </Card.Body>
           </Card>
-        ))
+        })
       )}
     </div>
   );

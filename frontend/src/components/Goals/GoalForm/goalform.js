@@ -16,7 +16,9 @@ function GoalForm() {
 
     if (!name || !description || !dueDate) return;
 
-    dispatch(addGoal({ name, description, dueDate }));
+    const dueDateObj = new Date(dueDate);
+    console.log('Enviando dueDate:', dueDateObj);
+    dispatch(addGoal({ name, description, dueDate: dueDateObj }));
 
     setName("");
     setDescription("");

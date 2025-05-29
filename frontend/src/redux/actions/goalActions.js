@@ -4,6 +4,12 @@ export const REMOVE_GOAL = 'REMOVE_GOAL';
 export const addGoal = (goal) => {
   return async (dispatch) => {
     try {
+      console.log('Enviando al backend:', {
+        name: goal.name,
+        description: goal.description,
+        dueDate: goal.dueDate ? goal.dueDate.toISOString() : null,
+      });
+
       const response = await fetch('http://localhost:5000/addGoal/', {
         method: 'POST',
         headers: {
@@ -13,7 +19,7 @@ export const addGoal = (goal) => {
         body: JSON.stringify({
           name: goal.name,
           description: goal.description,
-          deadline: goal.dueDate,
+          dueDate: goal.dueDate ? goal.dueDate.toISOString() : null,
         }),
       });
       const data = await response.json();
@@ -21,6 +27,7 @@ export const addGoal = (goal) => {
         dispatch({
           type: ADD_GOAL,
           payload: data.goal,
+
         });
       } else {
         // Optionally handle error

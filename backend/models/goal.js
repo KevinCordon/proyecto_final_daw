@@ -9,7 +9,7 @@ const goalSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    deadline: {
+    dueDate: {
         type: Date,
         required: false
     }

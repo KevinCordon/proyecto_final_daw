@@ -15,16 +15,20 @@ router.get('/getGoals', verifyApiKey, async (req, res) => {
 
 // Agregar una nueva meta
 router.post('/addGoal', verifyApiKey, async (req, res) => {
-  const { name, description, deadline } = req.body;
-
+  const { name, description, dueDate } = req.body;
+  console.log('Recibido en backend:', { name, description, dueDate });
   if (!name || !description) {
     return res.status(400).json({ error: 'Faltan parámetros: name o description' });
   }
 
   try {
-    const newGoal = new Goal({ name, description, deadline });
+    const newGoal = new Goal({
+      name,
+      description,
+      dueDate: dueDate ? new Date(dueDate) : undefined
+    });
     await newGoal.save();
-    res.status(201).json({ message: 'Meta agregada correctamente', goal: newGoal });
+    res.status(201).json({ message: 'Meta agregada correctamente', goal: newGoal.toJSON() });
   } catch (error) {
     res.status(500).json({ error: 'Error al guardar la meta en la base de datos' });
   }
