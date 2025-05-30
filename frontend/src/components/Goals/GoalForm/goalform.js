@@ -28,7 +28,6 @@ function GoalForm() {
         setError("");
 
         const dueDateObj = new Date(dueDate);
-        console.log('Enviando dueDate:', dueDateObj);
         dispatch(addGoal({ name, description, dueDate: dueDateObj }));
 
         setName("");
@@ -68,7 +67,6 @@ function GoalForm() {
                 />
             </Form.Group>
 
-            {/* Mostrar error si existe */}
             {error && <Alert variant="danger">{error}</Alert>}
 
             <Button variant="primary" type="submit" className="w-100">

@@ -5,7 +5,7 @@ const Task = require('../models/task');
 
 router.get('/getTasks', verifyApiKey, async (req, res) => {
   try {
-    console.log('Iniciando consulta a la base de datos...');
+    console.log('Iniciando consulta a DB...');
     res.set('Cache-Control', 'no-store');
     const tasks = await Task.find();
     console.log('Número de Tasks encontradas:', tasks.length);

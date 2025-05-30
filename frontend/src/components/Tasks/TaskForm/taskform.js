@@ -17,7 +17,7 @@ function TaskForm() {
 
         if (!name.trim() || !description.trim()) {
             setError("Por favor, ingresa nombre y descripción del task.");
-            return;  // No continúa si falta algo
+            return;
         }
 
         if (!dueDate) {
@@ -28,7 +28,6 @@ function TaskForm() {
         setError("");
 
         const dueDateObj = new Date(dueDate);
-        console.log("Enviando dueDate:", dueDateObj);
         dispatch(addTask({ name, description, dueDate: dueDateObj }));
 
         setName("");

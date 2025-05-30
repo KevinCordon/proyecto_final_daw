@@ -5,7 +5,7 @@ const Goal = require('../models/goal');
 
 router.get('/getGoals', verifyApiKey, async (req, res) => {
   try {
-    console.log('Iniciando consulta a la base de datos...');
+    console.log('Iniciando consulta a DB...');
     res.set('Cache-Control', 'no-store');
     const goals = await Goal.find();
     console.log('Número de Goals encontrados:', goals.length);

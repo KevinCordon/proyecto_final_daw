@@ -1,7 +1,7 @@
 import {
   ADD_GOAL,
   REMOVE_GOAL,
-  GET_GOALS, // Agregamos este import
+  GET_GOALS,
   FETCH_GOALS_REQUEST,
   FETCH_GOALS_SUCCESS,
   FETCH_GOALS_FAILURE
@@ -20,7 +20,7 @@ const goalReducer = (state = initialState, action) => {
       return { ...state, loading: true, error: null };
 
     case FETCH_GOALS_SUCCESS:
-    case GET_GOALS: // Agregamos este case también
+    case GET_GOALS:
       console.log('Goals cargados exitosamente:', action.payload);
       console.log('Cantidad de goals recibidos:', action.payload?.length || 0);
       return {

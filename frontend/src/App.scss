@@ -15,8 +15,8 @@ h1, h2 {
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #222223, #4d4d4d);
-  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #f2f2f2;
   height: 100vh;
 
   h1 {
@@ -36,6 +36,8 @@ h1, h2 {
     gap: 1rem;
 
     .btn {
+      background-color: #424242;
+      border: none;
       padding: 0.75rem 1.5rem;
       font-weight: bold;
       border-radius: 8px;
@@ -43,15 +45,16 @@ h1, h2 {
 
       &:hover {
         transform: scale(1.05);
+        background-color: #465e73;
       }
     }
 
     .btn-secondary {
-      background-color: #6c757d;
+      background-color: #424242;
       border: none;
 
       &:hover {
-        background-color: #5a6268;
+        background-color: #465e73;
       }
     }
   }

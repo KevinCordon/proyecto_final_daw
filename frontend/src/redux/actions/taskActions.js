@@ -15,7 +15,7 @@ export const getTasks = () => {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': '1234', // Cambiado de Authorization a X-API-Key
+                    'Authorization': '1234',
                 },
             });
 

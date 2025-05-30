@@ -20,7 +20,7 @@ const taskReducer = (state = initialState, action) => {
             return { ...state, loading: true, error: null };
 
         case FETCH_TASKS_SUCCESS:
-        case GET_TASKS: // Agregamos este case también
+        case GET_TASKS:
             console.log('Tasks cargadas exitosamente:', action.payload);
             console.log('Cantidad de tasks recibidas:', action.payload?.length || 0);
             return {
