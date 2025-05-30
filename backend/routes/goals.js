@@ -6,9 +6,14 @@ const Goal = require('../models/Goal');
 // Obtener todas las metas
 router.get('/getGoals', verifyApiKey, async (req, res) => {
   try {
+    console.log('Iniciando consulta a la base de datos...');
+    res.set('Cache-Control', 'no-store');
     const goals = await Goal.find();
+    console.log('Número de metas encontradas:', goals.length);
+    console.log('Metas obtenidas desde la base de datos:', goals);
     res.status(200).json(goals);
   } catch (error) {
+    console.error('Error en getGoals:', error);
     res.status(500).json({ error: 'Error al obtener metas desde la base de datos' });
   }
 });
