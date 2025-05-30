@@ -4,6 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { removeGoal, getGoals } from "../../../redux/actions/goalActions";
 import './goalitem.scss';
+import { motion, AnimatePresence } from "framer-motion";
 
 function Goalitem() {
   const dispatch = useDispatch();
@@ -50,30 +51,30 @@ function Goalitem() {
 
         {!goals || goals.length === 0 ? (
             <p>No goals added yet.</p>
-        ) : (
-            goals.map((goal, index) => {
-              return (
-                  <Card style={{ width: '18rem' }} key={goal._id || index} className="mb-3 goal-card">
-                    <Card.Body>
-                      <Card.Title><strong>Name</strong><br />{goal.name || 'Sin nombre'}</Card.Title>
-                      <Card.Text>
-                        <strong>Description</strong><br />{goal.description || 'Sin descripción'}
-                      </Card.Text>
-                      <Card.Text>
-                        <strong>Due Date: {goal.dueDate ? new Date(goal.dueDate).toLocaleDateString() : 'No due date'}</strong>
-                      </Card.Text>
-                      <Button
-                          variant="danger"
-                          className="w-100"
-                          onClick={() => handleRemoveGoal(goal._id)}
-                      >
-                        Remove
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              );
-            })
-        )}
+        ) : <AnimatePresence>
+          {goals.map((goal, index) => (
+              <motion.div
+                  key={goal._id || index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20, scale: 0.9 }}  // Animación al borrar
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
+                  layout  // Ayuda a animar el reacomodo de elementos
+              >
+                <Card style={{ width: '18rem' }} className="mb-3 goal-card">
+                  <Card.Body>
+                    <Card.Title><strong>Name</strong><br />{goal.name || 'Sin nombre'}</Card.Title>
+                    <Card.Text><strong>Description</strong><br />{goal.description || 'Sin descripción'}</Card.Text>
+                    <Card.Text><strong>Due Date: {goal.dueDate ? new Date(goal.dueDate).toLocaleDateString() : 'No due date'}</strong></Card.Text>
+                    <Button variant="danger" className="w-100" onClick={() => handleRemoveGoal(goal._id)}>
+                      Remove
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+          ))}
+        </AnimatePresence>
+        }
       </div>
   );
 }

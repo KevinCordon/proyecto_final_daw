@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const verifyApiKey = require('../middleware/auth');
-const Goal = require('../models/Goal');
+const Goal = require('../models/goal');
 
 router.get('/getGoals', verifyApiKey, async (req, res) => {
   try {

@@ -7,7 +7,7 @@ import taskReducer from './reducers/taskReducer'; // Agregar import
 // Combinar reducers
 const rootReducer = combineReducers({
     goals: goalReducer,
-    tasks: taskReducer, // Agregar taskReducer
+    tasks: taskReducer,
 });
 
 const composeEnhancers =

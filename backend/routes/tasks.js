@@ -1,38 +1,34 @@
-// backend/routes/tasks.js
 const express = require('express');
 const router = express.Router();
 const verifyApiKey = require('../middleware/auth');
-const Task = require('../models/Task');
+const Task = require('../models/task');
 
-// Obtener todas las tareas
 router.get('/getTasks', verifyApiKey, async (req, res) => {
   try {
+    console.log('Iniciando consulta a la base de datos...');
     res.set('Cache-Control', 'no-store');
-    const tasks = await Task.find().sort({ createdAt: -1 }); // Ordenar por fecha de creación (más recientes primero)
-    console.log('Tareas obtenidas desde la base de datos:', tasks);
-    console.log('Número de tareas encontradas:', tasks.length);
+    const tasks = await Task.find();
+    console.log('Número de Tasks encontradas:', tasks.length);
     res.status(200).json(tasks);
   } catch (error) {
+    console.error('Error en getTasks:', error);
     res.status(500).json({ error: 'Error al obtener tareas desde la base de datos' });
   }
 });
 
 router.post('/addTask', verifyApiKey, async (req, res) => {
-  const { name, description, dueDate, priority } = req.body;
-
+  const { name, description, dueDate } = req.body;
+  console.log('Recibido en backend:', { name, description, dueDate });
   if (!name || !description) {
-    return res.status(400).json({ error: 'Faltan parámetros: name o description son requeridos' });
+    return res.status(400).json({ error: 'Faltan parámetros: name o description' });
   }
 
   try {
     const newTask = new Task({
       name,
       description,
-      dueDate: dueDate ? new Date(dueDate) : undefined,
-      priority: priority || 'medium',
-      completed: false
+      dueDate: dueDate ? new Date(dueDate) : undefined
     });
-
     await newTask.save();
     res.status(201).json({ message: 'Tarea agregada correctamente', task: newTask.toJSON() });
   } catch (error) {
@@ -40,42 +36,11 @@ router.post('/addTask', verifyApiKey, async (req, res) => {
   }
 });
 
-router.patch('/updateTask', verifyApiKey, async (req, res) => {
-  const { id, completed, name, description, dueDate, priority } = req.body;
-
-  if (!id) {
-    return res.status(400).json({ error: 'ID de tarea requerido' });
-  }
-
-  try {
-    const updateData = {};
-    if (completed !== undefined) updateData.completed = completed;
-    if (name !== undefined) updateData.name = name;
-    if (description !== undefined) updateData.description = description;
-    if (dueDate !== undefined) updateData.dueDate = dueDate ? new Date(dueDate) : null;
-    if (priority !== undefined) updateData.priority = priority;
-
-    const updatedTask = await Task.findByIdAndUpdate(
-        id,
-        updateData,
-        { new: true } // Retornar el documento actualizado
-    );
-
-    if (!updatedTask) {
-      return res.status(404).json({ error: 'Tarea no encontrada' });
-    }
-
-    res.status(200).json({ message: 'Tarea actualizada correctamente', task: updatedTask.toJSON() });
-  } catch (error) {
-    res.status(500).json({ error: 'Error al actualizar la tarea' });
-  }
-});
-
 router.delete('/removeTask', verifyApiKey, async (req, res) => {
   const { id } = req.body;
 
   if (!id) {
-    return res.status(400).json({ error: 'ID de tarea requerido' });
+    return res.status(400).json({ error: 'ID requerido' });
   }
 
   try {

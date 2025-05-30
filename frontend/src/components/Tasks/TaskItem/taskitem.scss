@@ -1,14 +1,49 @@
-$primary: #F2F2F2;
-$secundary:#0540F2;
 
 
-.card {
-    background-color: $primary;
-    margin-top: 30px;
-    border: 0cap;
-}
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
 
-.btn {
-    background-color: $secundary;
-    border: $secundary;
+    p {
+        font-style: italic;
+        color: #6c757d;
+    }
+
+    .task-card {
+        background: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .card-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #212529;
+            }
+
+            .card-text {
+                color: #495057;
+                font-size: 0.95rem;
+            }
+
+            button {
+                margin-top: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
 }

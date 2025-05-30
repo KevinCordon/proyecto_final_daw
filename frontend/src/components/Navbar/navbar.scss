@@ -1,0 +1,41 @@
+/* navbar.scss */
+
+.navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 0.8rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #dcdcdc;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: #fff;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffd700 !important;
+    }
+
+    &.active {
+      color: #ffd700 !important;
+    }
+  }
+}

@@ -7,9 +7,22 @@
     <list default="true" id="0c3acc74-e0d4-4fc1-aa99-fe719cc35cc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/models/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/goals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalForm/goalform.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskform.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskitem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskForm/taskform.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Tasks/TaskItem/taskitem.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/taskActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/taskActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/reducers/taskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/taskReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
@@ -36,12 +49,12 @@
     &quot;assignee&quot;: &quot;KevinCordon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/KevinCordon/proyecto_final_daw.git",
-    "accountId": "91eea763-8dbf-49d0-b815-2c3591d1d0f5"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KevinCordon/proyecto_final_daw.git&quot;,
+    &quot;accountId&quot;: &quot;91eea763-8dbf-49d0-b815-2c3591d1d0f5&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -50,23 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Kevin/Desktop/Projecto_Final/todo-list/frontend/src/components/Tasks/TaskForm",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kevin/Desktop/Projecto_Final/todo-list&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kevin\Desktop\Projecto_Final\todo-list\frontend\src\components\Tasks\TaskForm" />
@@ -93,12 +107,26 @@
       <workItem from="1748367151494" duration="40000" />
       <workItem from="1748480156951" duration="1459000" />
       <workItem from="1748541773577" duration="493000" />
-      <workItem from="1748542557876" duration="18230000" />
+      <workItem from="1748542557876" duration="18751000" />
+      <workItem from="1748614447154" duration="576000" />
+      <workItem from="1748615036694" duration="327000" />
+      <workItem from="1748615539832" duration="5245000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
