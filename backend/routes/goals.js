@@ -3,14 +3,12 @@ const router = express.Router();
 const verifyApiKey = require('../middleware/auth');
 const Goal = require('../models/Goal');
 
-// Obtener todas las metas
 router.get('/getGoals', verifyApiKey, async (req, res) => {
   try {
     console.log('Iniciando consulta a la base de datos...');
     res.set('Cache-Control', 'no-store');
     const goals = await Goal.find();
-    console.log('Número de metas encontradas:', goals.length);
-    console.log('Metas obtenidas desde la base de datos:', goals);
+    console.log('Número de Goals encontrados:', goals.length);
     res.status(200).json(goals);
   } catch (error) {
     console.error('Error en getGoals:', error);
@@ -18,7 +16,6 @@ router.get('/getGoals', verifyApiKey, async (req, res) => {
   }
 });
 
-// Agregar una nueva meta
 router.post('/addGoal', verifyApiKey, async (req, res) => {
   const { name, description, dueDate } = req.body;
   console.log('Recibido en backend:', { name, description, dueDate });
@@ -39,7 +36,6 @@ router.post('/addGoal', verifyApiKey, async (req, res) => {
   }
 });
 
-// Eliminar una meta por ID
 router.delete('/removeGoal', verifyApiKey, async (req, res) => {
   const { id } = req.body;
 

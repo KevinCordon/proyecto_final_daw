@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3acc74-e0d4-4fc1-aa99-fe719cc35cc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/goals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Goals/GoalItem/goalitem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/goalActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/goalActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/reducers/goalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/goalReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +90,7 @@
       <workItem from="1748367151494" duration="40000" />
       <workItem from="1748480156951" duration="1459000" />
       <workItem from="1748541773577" duration="493000" />
-      <workItem from="1748542557876" duration="14790000" />
+      <workItem from="1748542557876" duration="15663000" />
     </task>
     <servers />
   </component>

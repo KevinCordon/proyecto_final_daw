@@ -19,23 +19,17 @@ export const getGoals = () => {
         },
       });
 
-      console.log('📡 Response status:', response.status);
-      console.log('📡 Response ok:', response.ok);
-
       const data = await response.json();
-      console.log('📦 Data recibida del backend:', data);
-      console.log('📊 Número de goals recibidos:', data.length);
+      console.log('Data recibida del backend:', data);
+      console.log('Número de goals recibidos:', data.length);
 
       if (response.ok) {
-        console.log('✅ Dispatch exitoso - enviando data al reducer');
         dispatch({
           type: FETCH_GOALS_SUCCESS,
           payload: data,
         });
-        // Ya no necesitamos dispatch GET_GOALS por separado
-        // porque FETCH_GOALS_SUCCESS ya maneja la actualización del estado
       } else {
-        console.log('❌ Error en response:', data.error);
+        console.log('Error en response:', data.error);
         dispatch({
           type: FETCH_GOALS_FAILURE,
           payload: data.error || 'Error al obtener goals'
@@ -43,7 +37,7 @@ export const getGoals = () => {
         alert(data.error || 'Error al obtener goals');
       }
     } catch (error) {
-      console.log('💥 Error de red:', error);
+      console.log('Error de red:', error);
       dispatch({
         type: FETCH_GOALS_FAILURE,
         payload: 'Error de red al obtener goals'
@@ -75,7 +69,6 @@ export const addGoal = (goal) => {
           type: ADD_GOAL,
           payload: data.goal,
         });
-
         dispatch(getGoals());
       } else {
         alert(data.error || 'Error adding goal');
@@ -86,26 +79,28 @@ export const addGoal = (goal) => {
   };
 };
 
-
 export const removeGoal = (goalId) => {
   return async (dispatch) => {
+    console.log('Iniciando eliminación de goal con ID:', goalId);
+
     try {
       const response = await fetch('http://localhost:5000/removeGoal', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': '1234',
+          'Authorization': '1234',
         },
         body: JSON.stringify({ id: goalId }),
       });
 
       const data = await response.json();
+
       if (response.ok) {
+        console.log('Goal eliminado del backend');
         dispatch({
           type: REMOVE_GOAL,
           payload: goalId,
         });
-        dispatch(getGoals());
       } else {
         alert(data.error || 'Error removing goal');
       }
