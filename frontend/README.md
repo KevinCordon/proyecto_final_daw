@@ -24,7 +24,7 @@ Este es el frontend de la aplicación Goal Tracker. Fue desarrollado con **React
 
    ```bash
    git clone https://github.com/KevinCordon/proyecto_final_daw.git
-   cd goal-tracker/frontend
+   cd proyecto_final_daw/frontend
    run npm install
    run npm start
    server will start in localhost:3000
