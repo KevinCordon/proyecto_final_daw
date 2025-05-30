@@ -10,7 +10,7 @@ Este es el backend para la aplicación Goal Tracker. Está construido con **Node
 - Middleware personalizado para API Key
 - Dotenv
 
-## 🔐 Rutas disponibles
+## Rutas disponibles
 
 - `POST /addGoal` – Agrega un nuevo Goal.
 - `GET /getGoals` – Retorna todas los Goals guardados.
