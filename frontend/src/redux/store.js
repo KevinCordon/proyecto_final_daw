@@ -1,17 +1,22 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import {thunk} from 'redux-thunk'; // Cambia esta línea si tienes una versión antigua
+import { createStore, applyMiddleware, compose } from 'redux';
+import { combineReducers } from 'redux';
+import { thunk } from 'redux-thunk';
 import goalReducer from './reducers/goalReducer';
+import taskReducer from './reducers/taskReducer'; // Agregar import
 
+// Combinar reducers
 const rootReducer = combineReducers({
-    goals: goalReducer
+    goals: goalReducer,
+    tasks: taskReducer, // Agregar taskReducer
 });
+
+const composeEnhancers =
+    (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+    compose;
 
 const store = createStore(
     rootReducer,
-    compose(
-        applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
-    )
+    composeEnhancers(applyMiddleware(thunk))
 );
 
 export default store;
